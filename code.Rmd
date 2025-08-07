@@ -35,7 +35,7 @@ par(mar=c(2,2,2,2))
 par(mgp=c(0,2,0))
 #c(bottom, left, top, right)
 
-example <- data$snow_fall[,,(12 * 12)]
+example <- data$snow_fall[,,(12 + 11 * 12)]
 
 image(example)
 ```
@@ -43,7 +43,7 @@ image(example)
 Furthermore, we show how \texttt{ggplot2} can be used to augment our plotting capabilities.
 
 ```{r}
-df <- data.frame("snowfall"=c(data$snow_fall[,,(12 + 11 * 12)]*1000),
+df <- data.frame("snowfall"=c(data$snow_fall[,,(12 + 11 * 12)]),
                  "lon"=c(lonlat[,,1]),
                  "lat"=c(lonlat[,,2])
 )
